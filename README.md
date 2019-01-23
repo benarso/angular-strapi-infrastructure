@@ -1,6 +1,6 @@
 # angular-strapi-infrastructure
 
-This is a complete virtualized environment using Vagrant and Docker for running a stapi backend with an angular app frontend
+This is a complete virtualized environment using Vagrant and Docker for running a Strapi.io backend with MongoDb and an angular app frontend
 
 ```sh
 git clone git@github.com:benarso/angular-strapi-infrastructure.git angular-strapi-infrastructure && cd angular-strapi-infrastructure
