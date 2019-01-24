@@ -4,7 +4,7 @@ This is a complete cross-platform development environment for running Docker con
 
 This project is running a Strapi.io backend with MongoDb and my angular-cleaner-architecture frontend projet.
 
-The Strapi.io and Angular projects have their own repositories, and are linked to this projet using git submodule feature.
+The Strapi.io (https://github.com/benarso/strapi-app) and Angular project (https://github.com/benarso/angular-cleaner-architecture) are linked to this projet using git submodule feature.
 
 Download and install Vagrant at https://www.vagrantup.com/downloads.html
 
