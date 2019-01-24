@@ -1,0 +1,38 @@
+version: '3'
+
+networks:
+  frontend:
+    driver: ${NETWORKS_DRIVER}
+  backend:
+    driver: ${NETWORKS_DRIVER}
+
+
+volumes:
+  mongo:
+    driver: ${VOLUMES_DRIVER}
+
+services:
+
+  ### MongoDB ##############################################
+    mongo:
+      build: ./apps/mongo
+      ports:
+        - "${MONGODB_PORT}:27017"
+      volumes:
+        - mongo:/data/db
+      networks:
+        - backend
+  ### Strapi Utilities ##################################
+    strapi:
+      build:
+        context: ./apps/backend
+      volumes:
+        - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
+      ports:
+        - 1337:1337
+      networks:
+        - frontend
+        - backend
+      depends_on:
+        - mongo
+      restart: always

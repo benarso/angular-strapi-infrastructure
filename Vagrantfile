@@ -24,12 +24,8 @@ Vagrant.configure("2") do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # NOTE: This will enable public access to the opened port
   config.vm.network "forwarded_port", guest: 80, host: 80, auto_correct: true
-  config.vm.network "forwarded_port", guest: 8080, host: 8080, auto_correct: true
-  config.vm.network "forwarded_port", guest: 9010, host: 9010, auto_correct: true
-  config.vm.network "forwarded_port", guest: 3306, host: 3306, auto_correct: true
-  config.vm.network "forwarded_port", guest: 22, host: 22, auto_correct: true
-  #config.vm.network "forwarded_port", guest: 9000, host: 9000, auto_correct: true
-  config.vm.network "forwarded_port", guest: 19999, host: 19999, auto_correct: true
+  config.vm.network "forwarded_port", guest: 1337, host: 1337, auto_correct: true
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
@@ -48,9 +44,9 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "apps", "/apps"
-  config.vm.synced_folder "data", "/data"
-  #config.vm.synced_folder "data", "/home/vagrant/data", owner: "vagrant"
+  #config.vm.synced_folder "apps", "/apps"
+  #config.vm.synced_folder "data", "/data"
+  #config.vm.synced_folder "data", "/data", owner: "vagrant"
   #config.vm.synced_folder "config/nginx", "/vagrant/laradock/nginx"
   
   #config.vm.synced_folder "laradock", "/laradock"
@@ -61,7 +57,7 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = false
+    vb.gui = true
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
   end
