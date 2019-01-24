@@ -6,6 +6,7 @@ This project is running a Strapi.io backend with MongoDb and my angular-cleaner-
 
 The Strapi.io and Angular projects have their own repositories, and are linked to this projet using git submodule feature.
 
+Download and install Vagrant at https://www.vagrantup.com/downloads.html
 
 ```sh
 git clone git@github.com:benarso/angular-strapi-infrastructure.git angular-strapi-infrastructure && cd angular-strapi-infrastructure
