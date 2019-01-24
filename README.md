@@ -8,3 +8,7 @@ git submodule init && git submodule update
 git submodule foreach npm install
 vagrant up
 ```
+Be patient !
+
+Next, open your browser at http://localhost:1337/admin to access the Strapi.io admin panel
+Angular app instructions are Coming Soon
